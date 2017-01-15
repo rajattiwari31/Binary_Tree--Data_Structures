@@ -38,7 +38,7 @@ void levelprint(struct node* root , int level)
     levelprint(root->right,level-1);
   }
 }
-void BSTprint(struct node* root)
+void BFSprint(struct node* root)
 {
   int h = height(root),i;
   printf("height of the TREE is : %d\n", h);
@@ -56,6 +56,6 @@ int main(){
   root->left->right=CTree(5);
   root->right->left=CTree(6);
   root->right->right=CTree(7);
-  BSTprint(root);
+  BFSprint(root);
   return 0;
 }
